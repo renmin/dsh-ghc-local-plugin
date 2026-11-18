@@ -1,6 +1,6 @@
 {
   "name": "@renmin/dsh-llm-ghc-local",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Installable DSH bundle that adds a ghc-local LLM provider backed by local GitHub Copilot",
   "type": "module",
   "main": "./index.js",

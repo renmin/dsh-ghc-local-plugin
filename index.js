@@ -56,6 +56,10 @@ class GhcLocalAdapter {
     return { id: provider, name: displayName }
   }
 
+  providerRetryPolicy(_provider) {
+    return undefined
+  }
+
   async ensureClient() {
     if (this.client !== undefined) return this.client
     const client = new CopilotClient({
