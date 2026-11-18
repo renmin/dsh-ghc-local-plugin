@@ -1,0 +1,1 @@
+# dsh-ghc-local-plugin`n`nPlugin workspace for ghc-local dsh LLM adapter.
