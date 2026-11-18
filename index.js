@@ -97,6 +97,13 @@ class GhcLocalAdapter {
     }
   }
 
+  async prepareCall(provider, model, signal) {
+    return {
+      model: await this.resolveModel(provider, model, signal),
+      stream: options => this.stream(options),
+    }
+  }
+
   async fetchModels() {
     if (Array.isArray(this.modelCache) && this.modelCache.length > 0) return this.modelCache
     try {
