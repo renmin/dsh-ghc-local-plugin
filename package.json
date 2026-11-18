@@ -1,0 +1,22 @@
+{
+  "name": "@renmin/dsh-llm-ghc-local",
+  "version": "0.1.0",
+  "description": "DSH LLM adapter that routes main-agent calls to local GitHub Copilot SDK",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "README.md"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "@deepseek-ai/dsh-llm": "file:../deepseek-harness-src/packages/llm/llm",
+    "@github/copilot-sdk": "^1.0.34"
+  }
+}
