@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "GitHub Copilot 本地提供器",
+    "description": "添加 ghc-local 模型提供器路由，调用本地 GitHub Copilot 运行时。"
+  }
+}

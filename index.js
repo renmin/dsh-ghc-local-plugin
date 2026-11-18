@@ -1,5 +1,4 @@
 import { CopilotClient, approveAll } from '@github/copilot-sdk'
-import { LlmAdapter, LlmError } from '@deepseek-ai/dsh-llm'
 
 const DEFAULT_PROVIDER = 'ghc-local'
 const DEFAULT_MODELS = ['gpt-5.3-codex', 'gpt-5']
@@ -43,9 +42,8 @@ function toStopReason(error, signal) {
   }
 }
 
-class GhcLocalAdapter extends LlmAdapter {
+class GhcLocalAdapter {
   constructor(options = {}) {
-    super()
     this.options = options
     this.client = undefined
     this.modelCache = undefined
@@ -135,7 +133,6 @@ class GhcLocalAdapter extends LlmAdapter {
       yield { type: 'block-end', index: 0, block: { type: 'text', text: content } }
       yield { type: 'finish', reason: { kind: 'stop' } }
     } catch (error) {
-      if (error instanceof LlmError) throw error
       yield { type: 'finish', reason: toStopReason(error, options.signal) }
     } finally {
       if (session !== undefined) await session.disconnect()

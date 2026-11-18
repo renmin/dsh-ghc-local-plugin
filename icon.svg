@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="ghc-local icon">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="112" height="112" rx="24" fill="url(#g)"/>
+  <path d="M34 64c0-16.57 13.43-30 30-30h30v16H64c-7.73 0-14 6.27-14 14s6.27 14 14 14h30v16H64c-16.57 0-30-13.43-30-30Z" fill="#fff"/>
+  <path d="M92 40h16v48H92z" fill="#fff"/>
+</svg>

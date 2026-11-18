@@ -1,0 +1,6 @@
+- insert:
+    - id: llm-ghc-local
+      name: '@renmin/dsh-llm-ghc-local'
+      config:
+        provider: ghc-local
+        displayName: GitHub Copilot Local

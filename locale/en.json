@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "GitHub Copilot local provider",
+    "description": "Adds the ghc-local model provider route backed by the local GitHub Copilot runtime."
+  }
+}

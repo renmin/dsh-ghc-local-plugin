@@ -1,14 +1,25 @@
 {
   "name": "@renmin/dsh-llm-ghc-local",
-  "version": "0.1.0",
-  "description": "DSH LLM adapter that routes main-agent calls to local GitHub Copilot SDK",
+  "version": "0.2.0",
+  "description": "Installable DSH bundle that adds a ghc-local LLM provider backed by local GitHub Copilot",
   "type": "module",
-  "main": "index.js",
+  "main": "./index.js",
+  "icon": "./icon.svg",
   "exports": {
-    ".": "./index.js"
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
   },
   "files": [
     "index.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
     "README.md"
   ],
   "license": "MIT",
@@ -16,7 +27,6 @@
     "test": "node --test tests/*.test.mjs"
   },
   "dependencies": {
-    "@deepseek-ai/dsh-llm": "file:../deepseek-harness-src/packages/llm/llm",
     "@github/copilot-sdk": "^1.0.34"
   }
 }
